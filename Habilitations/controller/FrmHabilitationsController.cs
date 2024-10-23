@@ -109,7 +109,7 @@ namespace Habilitations.controller
         /// <returns></returns>
         public bool PwdFort(string pwd)
         {
-            if (pwd.Length < 8 && pwd.Length > 30)
+            if (pwd.Length < 8 || pwd.Length > 30)
                 return false;
             if (!Regex.Match(pwd, @"[a-z]").Success)
                 return false;
